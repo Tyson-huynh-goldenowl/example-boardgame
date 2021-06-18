@@ -1,5 +1,5 @@
 
-import {clickCell} from './moves';
+import {clickCell,checkRows,checkCols,checkDiags} from './moves';
 import {IsVictory,IsDraw, } from './helper';
 
 export const TicTacToe = {
@@ -11,7 +11,7 @@ export const TicTacToe = {
     clickCell,
   },
 	endIf: (G, ctx) => {
-    if (IsVictory(G.cells)) {
+    if (checkRows(G.cells) || checkCols(G.cells) || checkDiags(G.cells)) {
       return { winner: ctx.currentPlayer };
     }
     if (IsDraw(G.cells)) {

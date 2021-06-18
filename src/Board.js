@@ -1,4 +1,6 @@
 import React from 'react';
+import IconX from './x.svg';
+import IconO from './o.svg';
 
 export class TicTacToeBoard extends React.Component {
   onClick(id) {
@@ -6,6 +8,7 @@ export class TicTacToeBoard extends React.Component {
   }
 
   render() {
+		const {G} = this.props;
     let winner = '';
     if (this.props.ctx.gameover) {
       winner =
@@ -29,10 +32,10 @@ export class TicTacToeBoard extends React.Component {
       let cells = [];
       for (let j = 0; j < 10; j++) {
         const id = 10 * i + j;
-				console.log('id------>',id)
         cells.push(
           <td style={cellStyle} key={id} onClick={() => this.onClick(id)}>
-            {this.props.G.cells[id]}
+            {/* {G.cells[id]} */}
+						{!!G.cells[id] && <img src={G.cells[id] === '0' ? IconO : IconX}  alt="icon-check" />}
           </td>
         );
       }
@@ -40,7 +43,7 @@ export class TicTacToeBoard extends React.Component {
     }
 
     return (
-      <div>
+      <div className="game-caro">
         <table id="board">
           <tbody>{tbody}</tbody>
         </table>
