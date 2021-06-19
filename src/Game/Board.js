@@ -1,6 +1,8 @@
 import React from 'react';
-import IconX from './x.svg';
-import IconO from './o.svg';
+import IconX from '../x.svg';
+import IconO from '../o.svg';
+
+import './styles.css';
 
 export class TicTacToeBoard extends React.Component {
   onClick(id) {

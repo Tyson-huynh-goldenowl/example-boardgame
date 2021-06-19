@@ -1,6 +1,6 @@
 
-import {clickCell,checkRows,checkCols,checkDiags} from './moves';
-import {IsVictory,IsDraw, } from './helper';
+import {clickCell,checkRows,checkCols,checkDiags} from '../moves/moves';
+import {IsVictory, IsDraw, } from '../helper/helper';
 
 export const TicTacToe = {
   setup: () => ({ cells: Array(100).fill(null) }),
