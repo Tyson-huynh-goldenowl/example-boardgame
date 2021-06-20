@@ -2,7 +2,7 @@ import React from 'react';
 import { Client } from 'boardgame.io/react';
 import { SocketIO } from 'boardgame.io/multiplayer';
 import { TicTacToe } from './Game/Game';
-import { TicTacToeBoard } from './Game/Board';
+import  TicTacToeBoard  from './Game/Board';
 
 const TicTacToeClient = Client({
   game: TicTacToe,

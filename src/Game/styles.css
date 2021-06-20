@@ -1,4 +1,22 @@
+.game-caro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.game-caro .header {
+  font-size: 24px;
+  margin: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 img {
   width: 20px !important;
   height: 20px !important;
+}
+.board-game {
+  border: 2px solid gold;
 }
