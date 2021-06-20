@@ -8,7 +8,7 @@ const TicTacToeClient = Client({
   game: TicTacToe,
   numPlayers: 2,
   board: TicTacToeBoard,
-  multiplayer: SocketIO({ server: 'localhost:8000' }),
+  // multiplayer: SocketIO({ server: 'localhost:8000' }),
   // ai:{
   //   enumerate: (G, ctx) => {
   //     let moves = [];
@@ -24,8 +24,8 @@ const TicTacToeClient = Client({
 
 const App = () => (
   <div>
-    <TicTacToeClient playerID="0" />
-    <TicTacToeClient playerID="1" />
+    <TicTacToeClient  />
+    {/* <TicTacToeClient playerID="1" /> */}
   </div>
 );
 
